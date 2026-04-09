@@ -1,3 +1,9 @@
+import dotenv from 'dotenv'
+dotenv.config()  // ← Must be BEFORE any cloudinary/other imports
+
+import cloudinary from 'cloudinary'
+// ... rest of your imports
+
 console.log("CLOUD NAME:", process.env.CLOUDINARY_CLOUD_NAME);
 console.log("API KEY:", process.env.CLOUDINARY_API_KEY);
 console.log("API SECRET:", process.env.CLOUDINARY_API_SECRET);
